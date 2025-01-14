@@ -9,10 +9,10 @@ const Pricing = () => {
             Pricing
         </h2>
         <div className="flex flex-wrap">
-            {pricingOptions.map((option, index) => (
-                <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-2">
+            {pricingOptions.map((option) => (
+                <div key={option.title} className="w-full sm:w-1/2 lg:w-1/3 p-2">
                     <div className="p-10 border border-neutral-700 rounded-xl">
-                        <p className="text-4x mb-8">
+                        <p className="text-4xl mb-8">
                             {option.title}
                             {option.title === "Pro" && (
                                 <span className="bg-gradient-to-r from-orange-500 to-red-400
@@ -29,7 +29,7 @@ const Pricing = () => {
                             {option.features.map((feature) => (
                                 <li key={feature.id} className="mt-8 flex items-center">
                                     <CheckCircle2 />
-                                    <span className="ml-2">{feature.name}</span>
+                                    <span className="ml-2">{feature}</span>
                                 </li>
                             ))}
                         </ul>
